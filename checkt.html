@@ -1,0 +1,31 @@
+    <label style="font-size: 30px">多选题: </label>
+    <p id="tdan" style="display:none">{{question.tdan}}</p>
+    <p id="th" style="display:none">{{question.th}}</p>
+    <div class="control-group" style="font-size: 20px">
+           <label class="control-label">{{question.th}}.{{question.tg }}</label>
+    </div>
+            <form  class="form-horizontal" name="question" style="font-size: 20px" >
+                <div class="checkbox">
+                    <label>
+                    <input  type="checkbox" id="A" name="checkbox" >{{ question.ta }}
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input  type="checkbox" id="B" name="checkbox" >{{ question.tb }}"
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input  type="checkbox" id="C" name="checkbox" >{{ question.tc }}"
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input  type="checkbox" id="D" name="checkbox" >{{ question.td }}"
+                    </label>
+                </div>
+               </form>
+            <div class="controls">
+            <button  class="btn btn-success"  type="button" onclick="checkchkbox()">检查</button>
+            </div>

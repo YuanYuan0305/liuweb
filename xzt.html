@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <script>
+    function displayResult(){
+        var x=document.getElementById("choice").type;
+        alert(x);
+    }
+    function checkfrm(th,tdan){
+    alert (th);
+    alert (tdan);
+    var elm=document.getElementsByName(th)
+    checked=false
+    for(i=0;i<elm.length;i++){
+    if(elm[i].checked){checked=true;alert(i)}
+    }
+    if(!checked){alert('Please Choice')}
+    }
+      </script>
+</head>
+
+<h3>Questions </h3>>
+    <ul>
+       <li>Question No{{ question.tg }}</li>
+        <form action="th={{question.th}}" >
+                <input type="radio" id="A" name="{{question.th}}" >{{ question.ta }}"<br>
+                <input type="radio" id="B" name="{{question.th}}" >{{ question.tb }}"<br>
+                <input type="radio" id="C" name="{{question.th}}" >{{ question.tc }}"<br>
+                <input type="radio" id="D" name="{{question.th}}" >{{ question.td }}"<br>
+                <input type="submit">
+        </form>
+    </ul>
+<a href="?th={{nextth}}">NEXT</a>
+<a href="?th={{lastth}}">LAST</a>
+
+
+</body>
+</html>

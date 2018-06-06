@@ -1,0 +1,52 @@
+   <script>
+    TH=4
+    function checkchkbox(){
+        var elm=document.getElementsByName(TH)
+        alert(TH)
+        alert(elm[0])
+        var dan=""
+            TDAN=document.getElementById("tdan").innerHTML
+            TH=Number(elm[0].name) //解决题号不连续问题
+            alert(TH)
+            for(i=0;i<elm.length;i++){
+                if(elm[i].checked){
+                    dan=dan+elm[i].id
+                 }
+             }
+            alert(dan)
+            if(dan==TDAN){
+                document.getElementById("Result").innerHTML=TH+" Right";
+               // alert('right')
+                }
+            else {
+                document.getElementById("Result").innerHTML=TH+" Worng";
+               // alert('Worng')
+                }
+      }
+</script>
+    <h3>Questions:55 </h3>>
+    <p id="tdan" style="display:none">ABC</p>
+        <ul>
+           <li>Question No典型的信息系统项目的开发模型包括( )。</li>
+            <form name="question" >
+                    <input type="checkbox" id="A" name="55" >A.瀑布模型"<br>
+                    <input type="checkbox" id="B" name="55" >B.螺旋模型"<br>
+                    <input type="checkbox" id="C" name="55" >C.迭代模型"<br>
+                    <input type="checkbox" id="D" name="55" >D.敏捷模型"<br>
+            </form>
+            <button type="button" onclick="checkchkbox()">提交</button>
+        </ul>
+
+
+     <h3>Questions:4 </h3>>
+    <p id="tdan" style="display:none">ABC</p>
+        <ul>
+           <li>Question No总行科技与产品管理局的职能包括( )</li>
+            <form name="question" >
+                    <input type="checkbox" id="A" name="4" >A.代表科技产品板块负责对接全行战略，对全行业务架构变化进行跟踪、分析和判断，制定与之匹配的IT战略规划"<br>
+                    <input type="checkbox" id="B" name="4" >B.负责统筹整合全行的信息化建设需求，制定年度计划，发布信息化建设任务"<br>
+                    <input type="checkbox" id="C" name="4" >C.负责根据任务实施情况进行考核和后评价 "<br>
+                    <input type="checkbox" id="D" name="4" >D.制定备援方案并进行灾难恢复演练，负责上海同城备份中心建设工作"<br>
+            </form>
+            <button type="button" onclick="checkchkbox()">提交</button>
+        </ul>

@@ -1,0 +1,49 @@
+ <!--
+    <h3>Questions:{{ question.th}} </h3>>
+    <p id="tdan" style="display:none">{{question.tdan}}</p>
+    <p id="th" style="display:none">{{question.th}}</p>
+        <ul>
+           <li>Question No{{ question.tg }}</li>
+            <form name="question" >
+                    <input type="radio" id="A" name="{{question.th}}" >{{ question.ta }}"<br>
+                    <input type="radio" id="B" name="{{question.th}}" >{{ question.tb }}"<br>
+                    <input type="radio" id="C" name="{{question.th}}" >{{ question.tc }}"<br>
+                    <input type="radio" id="D" name="{{question.th}}" >{{ question.td }}"<br>
+            </form>
+            <button type="button" onclick="checkradio()">提交</button>
+        </ul>
+-->
+
+ <p id="tdan" style="display:none">{{question.tdan}}</p>
+ <p id="th" style="display:none">{{question.th}}</p>
+ <label style="font-size: 30px">单选题:</label>
+ <div class="control-group" style="font-size: 20px">
+          <label class="control-label" >{{ question.th}}. {{ question.tg }}</label>
+ </div>
+
+  <form class="form-horizontal" style="font-size: 20px" >
+    <div class="radio">
+        <label>
+        <input   type="radio"  id="A" name="{{question.th}}" checked="checked"> {{ question.ta }}
+        </label>
+    </div>
+    <div class="radio">
+        <label >
+            <input  type="radio" id="B" name="{{question.th}}"> {{ question.tb }}
+        </label>
+    </div>
+     <div class="radio">
+          <label>
+            <input type="radio" id="C" name="{{question.th}}">{{ question.tc }}
+          </label>
+      </div>
+      <div class="radio">
+          <label >
+            <input type="radio"  id="D" name="{{question.th}}">{{ question.td }}
+          </label>
+       </div>
+  </form>
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn btn-success"  onclick="checkradio()">检查</button>
+          </div>

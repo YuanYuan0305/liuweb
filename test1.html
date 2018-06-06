@@ -1,0 +1,61 @@
+<html>
+<head>
+<style type="text/css">
+h1.intro
+{
+color:blue;
+text-align:center;
+}
+.important {background-color:yellow;}
+</style>
+
+
+</head>
+
+<body>
+
+
+<h2>this is a question?</h2>
+<form name="1" action="action_check" method="post" onsubmit="return beforeSubmit()"> 
+<input type="radio" id='A' name="1" value=" " checked='true'>select a</input><br>
+<input type="radio" id='B' name="1" value="B">select b</input><br>
+<input type="radio" id='C' name="1" value=" ">select c</input><br>
+<input type="radio" id='D' name="1" value=" ">select d</input><br>
+<input type="submit"  value="Submit"/>
+<button onclick="CheckForm("arg1","arg2");"">µ„ª˜’‚¿Ô</button>
+</form>
+
+<script>
+function beforeSubmit()
+{alert("aaa");
+	var x = document.getElementsByTagName("input");
+	document.writeln(x.length);
+alert(x.length);
+	for(var i=0;i<x.length;i++){
+
+	alert("CCC");
+	document.writeln("<br>document write</br>"+x[i].name+x[i].value+x[i].checked);
+
+	}
+	return false;
+}
+</script>
+
+<script language="javascript">
+   function CheckForm (var a, var b)
+   {
+	console.log("%s    %s", a ,b);
+	console.log("%o",radioForm.1.value);
+	if (radioForm.1.value == "female")
+      {
+          alert("ok!");
+          return false;
+      }
+          alert("error!");
+     return false;
+   }
+</script>
+
+</body>
+
+</html>
